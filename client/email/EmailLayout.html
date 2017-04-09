@@ -1,0 +1,16 @@
+<template name="EmailLayout">
+  <form>
+    Select List:<br>
+    <select>
+    {{#each dataset}}
+      <option value="{{listName}}">{{listName}}</option>
+    {{/each}}
+    </select>
+    <br>
+    Message Text:<br>
+    <textarea rows="4" cols="50"> </textarea>
+    <br>
+    <input type="submit" value="Submit">
+    {{> quickForm collection="ContactList" id = "insertContactListForm"}}
+  </form>
+</template>
